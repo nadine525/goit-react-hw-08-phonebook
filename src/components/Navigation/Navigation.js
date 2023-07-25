@@ -1,20 +1,21 @@
 import { FcTwoSmartphones } from 'react-icons/fc';
-// import { NavLink } from 'react-router-dom';
 
 import { iconSize } from 'components/constans';
-import { NavigationDiv, StyledLink } from './Navigation.styled';
+import { LinkDiv, StyledLink, NavigDiv } from './Navigation.styled';
 
 const Navigation = () => {
   return (
     <nav>
-      <NavigationDiv>
+      <NavigDiv>
         <StyledLink to="/">
-          <FcTwoSmartphones size={iconSize.extra} />
-          Phonebook
+          <LinkDiv>
+            <FcTwoSmartphones size={iconSize.extra} />
+            Phonebook
+          </LinkDiv>
         </StyledLink>
 
         <StyledLink to="/contacts">Contacts</StyledLink>
-      </NavigationDiv>
+      </NavigDiv>
     </nav>
   );
 };

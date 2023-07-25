@@ -1,17 +1,23 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const NavigationDiv = styled.div`
+export const LinkDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
-  align-items: baseline;
+`;
+
+export const NavigDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
 `;
 
 export const StyledLink = styled(NavLink)`
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 30px;
   line-height: 20px;
   cursor: pointer;
   text-decoration: none;
