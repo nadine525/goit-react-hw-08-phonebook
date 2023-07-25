@@ -8,14 +8,14 @@ import { selectIsLoading} from 'redux/selectors';
 
 import { useSelector } from 'react-redux';
 
-import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer } from "react-toastify";
+// import 'react-toastify/dist/ReactToastify.css';
 
 
 
 export function App() {
   const isLoadingFlag = useSelector(selectIsLoading);
-  // const isError = useSelector(selectError);
+  
 
 
   return (
@@ -27,7 +27,7 @@ export function App() {
       <Filter />
       <ContactList />
       {isLoadingFlag && <Loader />}
-      <ToastContainer autoClose={3000} limit={1} theme='dark' />
+      {/* <ToastContainer autoClose={3000} limit={1} theme='dark' /> */}
     </Division>
   )
 };
