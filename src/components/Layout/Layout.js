@@ -5,15 +5,16 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Loader from 'components/Loader';
+import { AppBar } from 'components/AppBar/AppBar';
 
 export const Layout = () => {
   return (
-    <div>
-      {/* <AppBar /> */}
+    <>
+      <AppBar />
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
       <ToastContainer autoClose={3000} theme="dark" />
-    </div>
+    </>
   );
 };
