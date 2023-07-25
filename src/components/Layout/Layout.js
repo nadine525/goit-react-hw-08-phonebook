@@ -9,11 +9,11 @@ import Loader from 'components/Loader';
 export const Layout = () => {
   return (
     <div>
-      <AppBar />
+      {/* <AppBar /> */}
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
-      <ToastContainer autoClose={3000} limit={1} theme="dark" />
+      <ToastContainer autoClose={3000} theme="dark" />
     </div>
   );
 };
