@@ -5,8 +5,8 @@ export const AppBar = () => {
   return (
     <HeaderContainer>
       <Navigation />
-      <UserMenu />
-      <AuthNav />
+      {/* <UserMenu /> */}
+      {/* <AuthNav /> */}
     </HeaderContainer>
   );
 };

@@ -5,7 +5,6 @@ import { Layout } from './Layout/Layout';
 
 export function App() {
 
-  
   return (
     <Routes>
       <Route path="/" element={Layout} />
