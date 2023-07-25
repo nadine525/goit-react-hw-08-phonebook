@@ -13,7 +13,9 @@ const Layout = () => {
       <AppBar />
 
       <Suspense fallback={<Loader />}>
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
       </Suspense>
 
       <ToastContainer autoClose={3000} theme="dark" />
