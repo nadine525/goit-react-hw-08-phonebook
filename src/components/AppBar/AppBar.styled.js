@@ -1,10 +1,18 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  display: flex;
-  align-items: space-between;
   width: 100%;
-  height: 60px;
-  padding: 0 40px;
-  box-shadow: 0px 4px 36px -21px rgba(0, 0, 0, 0.75);
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: lightskyblue;
+`;
+
+export const Division = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
 `;

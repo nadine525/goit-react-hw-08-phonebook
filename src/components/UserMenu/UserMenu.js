@@ -2,7 +2,7 @@ const UserMenu = () => {
   return (
     <div>
       <p>Welcome, User</p>
-      <button>LogOut</button>
+      <button type="button">LogOut</button>
     </div>
   );
 };
