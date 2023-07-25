@@ -1,7 +1,7 @@
 import { FcTwoSmartphones } from 'react-icons/fc';
 import { NavLink } from 'react-router-dom';
 
-export const Navigation = () => {
+const Navigation = () => {
   return (
     <nav>
       <NavLink to="/">
@@ -15,3 +15,5 @@ export const Navigation = () => {
     </nav>
   );
 };
+
+export default Navigation;

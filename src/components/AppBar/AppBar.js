@@ -1,7 +1,7 @@
-import { Navigation } from 'components/Navigation';
+import Navigation from 'components/Navigation';
 import { HeaderContainer } from './AppBar.styled';
 
-export const AppBar = () => {
+const AppBar = () => {
   return (
     <HeaderContainer>
       <Navigation />
@@ -10,3 +10,5 @@ export const AppBar = () => {
     </HeaderContainer>
   );
 };
+
+export default AppBar;
