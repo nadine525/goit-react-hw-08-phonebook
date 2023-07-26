@@ -6,9 +6,7 @@ const Home = () => {
       <HomeDiv>
         <Title>Hi, friend!</Title>
         <Paragraf>Do you need to be in touch?</Paragraf>
-        <Paragraf>
-          Sing up and start to create your personal Phonebook.
-        </Paragraf>
+        <Paragraf>Let's start to create your personal Phonebook.</Paragraf>
       </HomeDiv>
     </>
   );
