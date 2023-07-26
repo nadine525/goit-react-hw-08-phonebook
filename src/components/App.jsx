@@ -11,9 +11,9 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
-      <Route path="/register" component={<Registration />} />
-      <Route path="/login" component={<Login />} />
-      <Route path="/contacts" component={<Contacts />} />
+      <Route path="/register" element={<Registration />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/contacts" element={<Contacts />} />
       </Route>
     </Routes>
   )

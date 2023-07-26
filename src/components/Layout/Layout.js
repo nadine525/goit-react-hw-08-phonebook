@@ -7,15 +7,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import Loader from 'components/Loader';
 import AppBar from 'components/AppBar';
 
+import { MainContainer } from './Layout.styled';
+
 const Layout = () => {
   return (
     <>
       <AppBar />
 
       <Suspense fallback={<Loader />}>
-        <main>
+        <MainContainer>
           <Outlet />
-        </main>
+        </MainContainer>
       </Suspense>
 
       <ToastContainer autoClose={3000} theme="dark" />

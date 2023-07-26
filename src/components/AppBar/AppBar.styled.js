@@ -5,6 +5,7 @@ export const HeaderContainer = styled.header`
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: lightskyblue;
+  border-bottom: 1px solid black;
 `;
 
 export const Division = styled.div`
