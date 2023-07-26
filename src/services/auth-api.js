@@ -10,7 +10,7 @@ export const clearAuthHeader = () => {
   axios.defaults.headers.common.Authorization = '';
 };
 
-export const singUp = async user => {
+export const signUp = async user => {
   const { data } = await axios.post('/users/signup', user);
   return data;
 };
