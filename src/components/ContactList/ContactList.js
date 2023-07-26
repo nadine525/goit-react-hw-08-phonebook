@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import ContactElement from '../ContactElement';
 import { List } from './ContactList.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectVisibleContacts } from '../../redux/selectors';
-import * as contactsOperations from '../../redux/operations';
+import { selectVisibleContacts } from '../../redux/contacts/selectors';
+import * as contactsOperations from '../../redux/contacts/operations';
 
 const ContactList = () => {
   const visibleContacts = useSelector(selectVisibleContacts);

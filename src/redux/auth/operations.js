@@ -1,4 +1,4 @@
-import { AsyncThunk, createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import {
   setAuthHeader,
   clearAuthHeader,

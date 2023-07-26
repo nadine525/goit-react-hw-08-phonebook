@@ -5,7 +5,7 @@ import { Contact, Person } from './ContactElement.styled';
 import { Button } from '../ContactForm/ContactForm.styled';
 import { iconSize } from '../constans';
 import { useDispatch } from 'react-redux';
-import * as contactsOperations from '../../redux/operations';
+import * as contactsOperations from '../../redux/contacts/operations';
 
 const ContactElement = ({ id, name, number }) => {
   const dispatch = useDispatch();

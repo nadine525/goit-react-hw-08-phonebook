@@ -12,8 +12,17 @@ const handleRejected = (state, action) => {
 
 const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: { items: [], isLoading: false, error: null },
-
+  initialState: {
+    items: [],
+    isLoading: false,
+    error: null,
+    filter: '',
+  },
+  reducers: {
+    setFilter(state, action) {
+      state.filter = action.payload;
+    },
+  },
   extraReducers: builder =>
     builder
       .addCase(getContacts.pending, handlePending)
@@ -39,5 +48,5 @@ const contactsSlice = createSlice({
       .addCase(deleteContact.rejected, handleRejected),
 });
 
-export const { addNewContact, deleteOldContact } = contactsSlice.actions;
+export const { setFilter } = contactsSlice.actions;
 export const contactsReducer = contactsSlice.reducer;
