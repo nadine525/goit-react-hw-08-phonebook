@@ -3,9 +3,9 @@ import { AuthNavDiv, StyledLink } from './AuthNav.styled';
 const AuthNav = () => {
   return (
     <AuthNavDiv>
-      <StyledLink to="/register">Sing Up</StyledLink>
+      <StyledLink to="/register">Sign Up</StyledLink>
 
-      <StyledLink to="/login">Sing In</StyledLink>
+      <StyledLink to="/login">Sign In</StyledLink>
     </AuthNavDiv>
   );
 };
