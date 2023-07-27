@@ -23,6 +23,11 @@ export const Input = styled.input`
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid black;
+  &:hover,
+  &:focus {
+    color: #c75124;
+    border: 1px solid #c75124;
+  }
 `;
 
 export const Button = styled.button`
@@ -38,8 +43,17 @@ export const Button = styled.button`
   font-size: 14px;
   padding: 0 10px;
   text-align: center;
+  background-color: lightblue;
 
   &:hover {
-    background-color: #188ce8;
+    color: #c75124;
+    border: 1px solid #c75124;
   }
+`;
+
+export const Paragraf = styled.p`
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 20px;
+  color: #c75124;
 `;

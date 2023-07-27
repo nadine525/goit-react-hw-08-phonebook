@@ -5,9 +5,11 @@ import Filter from 'components/Filter/Filter';
 export const Contacts = () => {
   return (
     <div>
-      <ContactList />
       <ContactForm />
-      <Filter />
+      <div>
+        <ContactList />
+        <Filter />
+      </div>
     </div>
   );
 };
