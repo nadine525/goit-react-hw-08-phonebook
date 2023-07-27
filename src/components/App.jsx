@@ -7,7 +7,8 @@ import { Registration } from 'pages/Registration';
 import { Login } from 'pages/Login';
 import { Contacts } from 'pages/Contacts';
 import { userRefresh } from '../redux/auth/operations';
-// import { PrivateRoute } from './PrivateRoute.js/PrivateRoute';
+import { PrivateRoute } from 'components/PrivateRoute/PrivateRoute';
+import { RestrictedRoute } from 'components/RestrictedRoute/RestrictedRoute';
 
 
 export const App = () => {
@@ -21,10 +22,10 @@ export const App = () => {
       <Route path="/" element={<Layout />}>
 
         <Route index element={<Home />} />
-        <Route path="/register" element={<Registration />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/contacts" element={<Contacts />} />
-        
+        <Route path="/register" element={<RestrictedRoute redirectTo="/contacts" component={<Registration />} />}/>
+        <Route path="/login" element={<RestrictedRoute redirectTo="/contacts" component={<Login />} />}/>
+        <Route path="/contacts" element={<PrivateRoute redirectTo='/login' element={<Contacts />} />}/>
+
       </Route>
     </Routes>
   )
