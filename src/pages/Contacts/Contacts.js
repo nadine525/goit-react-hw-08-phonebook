@@ -1,15 +1,16 @@
 import ContactForm from 'components/ContactForm/ContactForm';
 import ContactList from 'components/ContactList/ContactList';
 import Filter from 'components/Filter/Filter';
+import { Division } from './Contacts.styled';
 
-export const Contacts = () => {
+const Contacts = () => {
   return (
-    <div>
+    <Division>
       <ContactForm />
-      <div>
-        <ContactList />
-        <Filter />
-      </div>
-    </div>
+      <Filter />
+      <ContactList />
+    </Division>
   );
 };
+
+export default Contacts;

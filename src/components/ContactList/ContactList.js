@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import ContactElement from '../ContactElement';
-import { List } from './ContactList.styled';
+import { List, Paragraf, ContactListDivision } from './ContactList.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectVisibleContacts } from '../../redux/contacts/selectors';
 import * as contactsOperations from '../../redux/contacts/operations';
@@ -17,17 +17,22 @@ const ContactList = () => {
   // console.log(contacts);
 
   return (
-    <List>
-      {visibleContacts.length > 0 ? (
-        visibleContacts.map(({ id, name, number }) => {
-          return (
-            <ContactElement key={id} id={id} name={name} number={number} />
-          );
-        })
-      ) : (
-        <p>Let's start creating your phonebook! </p>
-      )}
-    </List>
+    <>
+      <ContactListDivision>
+        <Paragraf>My contacts</Paragraf>
+        <List>
+          {visibleContacts.length > 0 ? (
+            visibleContacts.map(({ id, name, number }) => {
+              return (
+                <ContactElement key={id} id={id} name={name} number={number} />
+              );
+            })
+          ) : (
+            <p>Add your first contact! </p>
+          )}
+        </List>
+      </ContactListDivision>
+    </>
   );
 };
 

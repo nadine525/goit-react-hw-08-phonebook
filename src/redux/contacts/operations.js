@@ -3,7 +3,7 @@ import * as contactsAPI from '../../services/contacts-api';
 import { toast } from 'react-toastify';
 
 export const getContacts = createAsyncThunk(
-  `contacts/getContacts`,
+  'contacts/getContacts',
   async (_, { rejectWithValue }) => {
     try {
       const contacts = await contactsAPI.fetchContacts();
@@ -16,7 +16,7 @@ export const getContacts = createAsyncThunk(
 );
 
 export const addContact = createAsyncThunk(
-  `contacts/postContact`,
+  'contacts/postContact',
   async (newContact, { rejectWithValue }) => {
     try {
       const contact = await contactsAPI.addContact(newContact);
@@ -29,7 +29,7 @@ export const addContact = createAsyncThunk(
 );
 
 export const deleteContact = createAsyncThunk(
-  `contacts/deleteContact`,
+  'contacts/deleteContact',
   async (contactId, { rejectWithValue }) => {
     try {
       const deletedContact = await contactsAPI.deleteContact(contactId);

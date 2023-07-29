@@ -10,7 +10,6 @@ export const Form = styled.form`
   flex-wrap: nowrap;
   align-items: center;
   gap: 10px;
-  margin-bottom: 20px;
 `;
 
 export const Label = styled.label`
@@ -18,7 +17,7 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  width: 250px;
+  width: 300px;
   height: 24px;
   font-size: 16px;
   border-radius: 5px;
@@ -56,4 +55,15 @@ export const Paragraf = styled.p`
   font-size: 30px;
   line-height: 20px;
   color: #c75124;
+`;
+
+export const ContactFormDivision = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ParagrafCreate = styled.p`
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 0;
 `;

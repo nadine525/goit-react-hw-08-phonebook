@@ -1,5 +1,5 @@
 import React from 'react';
-import { Label } from './Filter.styled';
+import { Label, ParagrafCreate } from './Filter.styled';
 import { Input } from '../ContactForm/ContactForm.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilter } from 'redux/contacts/selectors';
@@ -15,7 +15,7 @@ const Filter = () => {
 
   return (
     <Label>
-      Find Contacts by name
+      <ParagrafCreate>Find Contacts by name</ParagrafCreate>
       <Input type="text" value={filter} onChange={changeFilter} />
     </Label>
   );
