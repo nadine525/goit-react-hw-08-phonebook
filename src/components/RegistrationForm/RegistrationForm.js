@@ -1,6 +1,13 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { registerUser } from 'redux/auth/operations';
+import {
+  Form,
+  Button,
+  Label,
+  Input,
+  ParagrafCreate,
+} from './RegistrationForm.styled';
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
@@ -37,10 +44,12 @@ const RegistrationForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label htmlFor="name">
+    <>
+      <ParagrafCreate>Fil the registration Form, please</ParagrafCreate>
+      <Form onSubmit={handleSubmit} autoComplete="off">
+        <Label htmlFor="name"></Label>
         Name
-        <input
+        <Input
           type="text"
           name="name"
           value={name}
@@ -49,27 +58,23 @@ const RegistrationForm = () => {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-      </label>
-      <label>
-        Email
-        <input
+        <Label>Email</Label>
+        <Input
           type="email"
           name="email"
           value={email}
           onChange={handleChange}
         />
-      </label>
-      <label>
-        Password
-        <input
+        <Label>Password</Label>
+        <Input
           type="password"
           name="password"
           value={password}
           onChange={handleChange}
         />
-      </label>
-      <button type="submit">Registration</button>
-    </form>
+        <Button type="submit">Registration</Button>
+      </Form>
+    </>
   );
 };
 

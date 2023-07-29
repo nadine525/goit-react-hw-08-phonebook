@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Layout from './Layout/Layout';
 import Home from 'pages/Home/Home';
-import { Registration } from 'pages/Registration';
+import Registration from 'pages/Registration/Registration';
 import Login from 'pages/Login/Login';
 import Contacts from 'pages/Contacts/Contacts';
 import { userRefresh } from '../redux/auth/operations';
