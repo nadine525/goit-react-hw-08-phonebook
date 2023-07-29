@@ -28,7 +28,7 @@ const ContactList = () => {
               );
             })
           ) : (
-            <p>Add your first contact! </p>
+            <p>There is not contact whis that name </p>
           )}
         </List>
       </ContactListDivision>
