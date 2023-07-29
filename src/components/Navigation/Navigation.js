@@ -17,7 +17,7 @@ const Navigation = () => {
           </LinkDiv>
         </StyledLink>
 
-        {isLoggedIn && <StyledLink to="/contacts">Contacts</StyledLink>}
+        {isLoggedIn && <StyledLink to="/contacts">My contacts</StyledLink>}
       </NavigDiv>
     </nav>
   );
