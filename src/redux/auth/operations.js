@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 import axios from 'axios';
 import { setAuthHeader, clearAuthHeader } from 'services/auth-api';
 
@@ -7,6 +8,7 @@ export const registerUser = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const res = await axios.post('/users/signup', credentials);
+      toast.success('Conglatulation! Your registration was successeful.');
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
