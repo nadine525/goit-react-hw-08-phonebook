@@ -16,7 +16,17 @@ export const addContact = async newContact => {
 
 export const deleteContact = async id => {
   const response = await axios.delete(`/contacts/${id}`);
-  console.log(response.data);
+  // console.log(response.data);
+
+  return response.data;
+};
+
+export const editContact = async editedContact => {
+  const response = await axios.patch(`/contacts/${editedContact.id}`, {
+    name: editedContact.name,
+    number: editedContact.number,
+  });
+  // console.log(response.data);
 
   return response.data;
 };

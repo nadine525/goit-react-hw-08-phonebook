@@ -19,3 +19,44 @@ export const Person = styled.p`
     margin-right: 12px;
   }
 `;
+
+export const ButtonDelete = styled.button`
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  height: 24px;
+  font-size: 14px;
+  padding: 0 10px;
+  text-align: center;
+  background-color: lightblue;
+
+  &:hover {
+    color: #c75124;
+    border: 1px solid #c75124;
+  }
+`;
+
+export const ButtonEdit = styled.button`
+  margin-right: 14px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  height: 24px;
+  font-size: 14px;
+  padding: 0 10px;
+  text-align: center;
+  background-color: lightblue;
+
+  &:hover {
+    color: #c75124;
+    border: 1px solid #c75124;
+  }
+`;

@@ -20,7 +20,7 @@ export const addContact = createAsyncThunk(
   async (newContact, { rejectWithValue }) => {
     try {
       const contact = await contactsAPI.addContact(newContact);
-      toast.success('Very good! The contact was added.');
+      // toast.success('Very good! The contact was added.');
       return contact;
     } catch (error) {
       toast.error('Sorry! There is an error.');
@@ -35,8 +35,23 @@ export const deleteContact = createAsyncThunk(
     try {
       const deletedContact = await contactsAPI.deleteContact(contactId);
       console.log(deletedContact.id);
-      toast.success('The contact was deleted.');
+      // toast.success('The contact was deleted.');
       return deletedContact.id;
+    } catch (error) {
+      toast.error('Sorry! There is an error.');
+      return rejectWithValue(error);
+    }
+  }
+);
+
+export const editContact = createAsyncThunk(
+  'contacts/editContact',
+  async (editedContact, { rejectWithValue }) => {
+    try {
+      const changedContact = await contactsAPI.editContact(editedContact);
+      // console.log(changedContact);
+      // toast.success('The contact was saved.');
+      return changedContact;
     } catch (error) {
       toast.error('Sorry! There is an error.');
       return rejectWithValue(error);

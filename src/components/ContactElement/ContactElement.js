@@ -1,14 +1,32 @@
 import React from 'react';
 import { FaPhone } from 'react-icons/fa';
 import PropTypes from 'prop-types';
-import { Contact, Person } from './ContactElement.styled';
-import { Button } from '../ContactForm/ContactForm.styled';
+import {
+  Contact,
+  Person,
+  ButtonEdit,
+  ButtonDelete,
+} from './ContactElement.styled';
+
 import { iconSize } from '../constans';
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import Modal from 'components/Modal';
+import ContactEditForm from 'components/ContactEditForm/ContactEditForm';
 import * as contactsOperations from '../../redux/contacts/operations';
 
 const ContactElement = ({ id, name, number }) => {
   const dispatch = useDispatch();
+
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const openModal = () => {
+    setIsOpenModal(true);
+  };
+
+  const closeModal = () => {
+    setIsOpenModal(false);
+  };
 
   const handleDeleteContact = contactId => {
     dispatch(contactsOperations.deleteContact(contactId));
@@ -19,9 +37,25 @@ const ContactElement = ({ id, name, number }) => {
       <Person>
         <FaPhone size={iconSize.xs} /> {name} : {number}
       </Person>
-      <Button type="button" onClick={() => handleDeleteContact(id)}>
-        Delete
-      </Button>
+      <div>
+        <ButtonEdit type="button" onClick={openModal}>
+          Edit
+        </ButtonEdit>
+        <ButtonDelete type="button" onClick={() => handleDeleteContact(id)}>
+          Delete
+        </ButtonDelete>
+      </div>
+
+      {isOpenModal && (
+        <Modal closeModal={closeModal}>
+          <ContactEditForm
+            id={id}
+            filledName={name}
+            filledNumber={number}
+            closeModal={closeModal}
+          />
+        </Modal>
+      )}
     </Contact>
   );
 };
