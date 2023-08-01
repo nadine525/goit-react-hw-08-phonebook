@@ -50,7 +50,7 @@ export const editContact = createAsyncThunk(
     try {
       const changedContact = await contactsAPI.editContact(editedContact);
       // console.log(changedContact);
-      // toast.success('The contact was saved.');
+      toast.success('The contact was saved.');
       return changedContact;
     } catch (error) {
       toast.error('Sorry! There is an error.');
