@@ -43,7 +43,7 @@ const ContactEditForm = ({ id, filledName, filledNumber }) => {
   return (
     <>
       <ContactFormDivision>
-        <Form onClick={submitEditedContact}>
+        <Form onSubmit={submitEditedContact}>
           <Label htmlFor="name">Name</Label>
           <Input
             type="text"
