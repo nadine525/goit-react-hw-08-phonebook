@@ -9,4 +9,6 @@ export const ParagrafCreate = styled.p`
   font-size: 18px;
   font-weight: 400;
   margin-top: 0;
+  text-align: center;
+  color: ${props => props.theme.colors.text};
 `;

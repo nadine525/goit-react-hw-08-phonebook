@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Form = styled.form`
   padding: 10px;
   width: 400px;
-  border: 1px solid black;
+  border: 1px solid ${props => props.theme.borders.borderColorMain};
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@ export const Form = styled.form`
 
 export const Label = styled.label`
   text-align: left;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const Input = styled.input`
@@ -50,12 +51,12 @@ export const Button = styled.button`
   }
 `;
 
-export const Paragraf = styled.p`
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 20px;
-  color: #c75124;
-`;
+// export const Paragraf = styled.p`
+//   font-weight: 700;
+//   font-size: 30px;
+//   line-height: 20px;
+//   color: ${props => props.theme.colors.text};
+// `;
 
 export const ContactFormDivision = styled.div`
   display: flex;
@@ -66,4 +67,6 @@ export const ParagrafCreate = styled.p`
   font-size: 18px;
   font-weight: 400;
   margin-top: 0;
+  text-align: center;
+  color: ${props => props.theme.colors.text};
 `;

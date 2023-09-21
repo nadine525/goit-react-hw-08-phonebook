@@ -12,11 +12,12 @@ export const Person = styled.p`
   align-items: center;
   margin-top: 0;
   margin-bottom: 8px;
-  color: black;
+  color: ${props => props.theme.colors.text};
 
   svg {
     display: block;
     margin-right: 12px;
+    fill: #c75124;
   }
 `;
 
@@ -37,6 +38,10 @@ export const ButtonDelete = styled.button`
   &:hover {
     color: #c75124;
     border: 1px solid #c75124;
+
+    svg {
+      fill: #c75124;
+    }
   }
 `;
 
@@ -58,5 +63,9 @@ export const ButtonEdit = styled.button`
   &:hover {
     color: #c75124;
     border: 1px solid #c75124;
+
+    svg {
+      fill: #c75124;
+    }
   }
 `;

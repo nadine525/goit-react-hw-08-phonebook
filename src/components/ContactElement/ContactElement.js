@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaPhone } from 'react-icons/fa';
+import { RiDeleteBin6Line } from 'react-icons/ri';
+import { RiBallPenLine } from 'react-icons/ri';
 import PropTypes from 'prop-types';
 import {
   Contact,
@@ -39,10 +41,10 @@ const ContactElement = ({ id, name, number }) => {
       </Person>
       <div>
         <ButtonEdit type="button" onClick={openModal}>
-          Edit
+          <RiBallPenLine size={iconSize.sm} />
         </ButtonEdit>
         <ButtonDelete type="button" onClick={() => handleDeleteContact(id)}>
-          Delete
+          <RiDeleteBin6Line size={iconSize.sm} />
         </ButtonDelete>
       </div>
 

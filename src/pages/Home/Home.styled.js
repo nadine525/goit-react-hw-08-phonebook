@@ -6,7 +6,8 @@ export const HomeDiv = styled.div`
   flex-direction: column;
   gap: 10px;
   text-align: center;
-  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 `;
 
 export const Title = styled.h1`
@@ -16,6 +17,8 @@ export const Title = styled.h1`
 `;
 
 export const Paragraf = styled.p`
+  margin-top: 0;
   font-size: 24px;
   font-weight: 500;
+  color: ${props => props.theme.colors.text};
 `;

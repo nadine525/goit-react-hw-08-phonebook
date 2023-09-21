@@ -1,6 +1,8 @@
 import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
-import { BackDrop, ModalContent } from './Modal.styled';
+import { RiCloseFill } from 'react-icons/ri';
+import { iconSize } from '../constans';
+import { BackDrop, ModalContent, CloseButton } from './Modal.styled';
 
 const modalRoot = document.querySelector('#modal-root');
 
@@ -26,7 +28,12 @@ const Modal = ({ children, closeModal }) => {
 
   return createPortal(
     <BackDrop onClick={onContentClick}>
-      <ModalContent>{children}</ModalContent>
+      <ModalContent>
+        <CloseButton onClick={closeModal}>
+          <RiCloseFill size={iconSize.sm} />
+        </CloseButton>
+        {children}
+      </ModalContent>
     </BackDrop>,
     modalRoot
   );

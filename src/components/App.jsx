@@ -11,6 +11,8 @@ import { selectIsRefreshing } from 'redux/auth/selectors';
 import { PrivateRoute } from 'components/PrivateRoute/PrivateRoute';
 import { RestrictedRoute } from 'components/RestrictedRoute/RestrictedRoute';
 
+import ThemeProvider from 'hooks/useTheme';
+
 const Home = lazy(() => import('pages/Home/Home'));
 const Registration = lazy(() => import('pages/Registration/Registration'));
 const Login = lazy(() => import('pages/Login/Login'));
@@ -23,19 +25,22 @@ export const App = () => {
   useEffect(() => { dispatch(userRefresh()) }, [dispatch]);
 
   return (
+    
     isRefreching ? (
     <b>Refreshing user...</b>
     ) : (
-        <Routes>
-        <Route path="/" element={<Layout />}>
+        <ThemeProvider>
+          <Routes>
+            <Route path="/" element={<Layout />}>
 
-          <Route index element={<Home />} />
-          <Route path="/register" element={<RestrictedRoute redirectTo="/contacts" component={<Registration />} />}/>
-          <Route path="/login" element={<RestrictedRoute redirectTo="/contacts" component={<Login />} />}/>
-          <Route path="/contacts" element={<PrivateRoute redirectTo="/login" component={<Contacts />} />}/>
+              <Route index element={<Home />} />
+              <Route path="/register" element={<RestrictedRoute redirectTo="/contacts" component={<Registration />} />}/>
+              <Route path="/login" element={<RestrictedRoute redirectTo="/contacts" component={<Login />} />}/>
+              <Route path="/contacts" element={<PrivateRoute redirectTo="/login" component={<Contacts />} />}/>
 
-        </Route>
-    </Routes>)
+          </Route>
+            </Routes>
+        </ThemeProvider>)
   )
 };
 

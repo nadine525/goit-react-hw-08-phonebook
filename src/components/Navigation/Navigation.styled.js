@@ -21,7 +21,7 @@ export const StyledLink = styled(NavLink)`
   line-height: 20px;
   cursor: pointer;
   text-decoration: none;
-  color: #212121;
+  color: ${props => props.theme.colors.text};
 
   &:hover {
     text-decoration: underline;

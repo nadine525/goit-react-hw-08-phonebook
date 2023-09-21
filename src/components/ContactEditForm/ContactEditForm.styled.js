@@ -55,9 +55,3 @@ export const ContactFormDivision = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
-// export const ParagrafCreate = styled.p`
-//   font-size: 18px;
-//   font-weight: 400;
-//   margin-top: 0;
-// `;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Form = styled.form`
   padding: 18px 10px;
   width: 400px;
-  border: 1px solid black;
+  border: 1px solid ${props => props.theme.borders.borderColorMain};
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@ export const Form = styled.form`
 
 export const Label = styled.label`
   text-align: start;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const Input = styled.input`
@@ -55,7 +56,7 @@ export const Paragraf = styled.p`
   font-weight: 700;
   font-size: 30px;
   line-height: 20px;
-  color: #c75124;
+  color: ${props => props.theme.colors.text};
 `;
 
 export const ContactFormDivision = styled.div`
@@ -68,4 +69,6 @@ export const ParagrafCreate = styled.p`
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 0;
+  text-align: center;
+  color: ${props => props.theme.colors.text};
 `;

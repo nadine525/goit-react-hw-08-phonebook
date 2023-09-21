@@ -6,4 +6,5 @@ export const Division = styled.div`
   gap: 10px;
   padding-top: 30px;
   padding-bottom: 30px;
+  align-items: center;
 `;

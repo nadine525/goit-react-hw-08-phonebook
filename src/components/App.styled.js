@@ -5,4 +5,5 @@ export const Division = styled.div`
   flex-direction: column;
   padding: 40px 40px;
   width: 420px;
+  background-color: ${props => props.theme.colors.main};
 `;
